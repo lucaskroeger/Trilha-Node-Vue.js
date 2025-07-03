@@ -1,0 +1,49 @@
+{
+  "name": "projeto",
+  "version": "1.0.0",
+  "description": "API de gerenciamento de estoque",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "../node_modules/.bin/nodemon server.js",
+    "test": "../node_modules/.bin/jest",
+    "test:watch": "../node_modules/.bin/jest --watch",
+    "test:unit": "../node_modules/.bin/jest tests/unit",
+    "test:integration": "../node_modules/.bin/jest tests/integration",
+    "test:coverage": "../node_modules/.bin/jest --coverage",
+    "test:ci": "../node_modules/.bin/jest --ci --coverage --watchAll=false",
+    "lint": "../node_modules/.bin/eslint src/",
+    "docs": "../node_modules/.bin/swagger-jsdoc -d swaggerDef.js -o swagger.json"
+  },
+  "keywords": [
+    "api",
+    "estoque",
+    "nodejs",
+    "express"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "axios": "^1.10.0",
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "express-validator": "^7.0.1",
+    "helmet": "^7.1.0",
+    "joi": "^17.11.0",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.14.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.2",
+    "supertest": "^6.3.3"
+  }
+}

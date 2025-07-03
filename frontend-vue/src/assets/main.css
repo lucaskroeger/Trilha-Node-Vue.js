@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.v-application {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+.page-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-container {
+    margin-bottom: 20px;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.table-container {
+    margin-top: 20px;
+}
+
+.dashboard-card {
+    height: 100%;
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+}
+
+.dashboard-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, #6B46C1, #9F7AEA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.dashboard-label {
+    color: #4A5568;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Estilo para cards gerais */
+.v-card {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Estilo para botões */
+.v-btn {
+    border-radius: 12px !important;
+    font-weight: 600 !important;
+    text-transform: none !important;
+    letter-spacing: 0.5px !important;
+    box-shadow: 0 4px 16px rgba(107, 70, 193, 0.3) !important;
+    transition: all 0.3s ease !important;
+}
+
+.v-btn:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 24px rgba(107, 70, 193, 0.4) !important;
+}
+
+/* Estilo para campos de formulário */
+.v-text-field,
+.v-select,
+.v-textarea {
+    border-radius: 12px !important;
+}
+
+.v-text-field .v-field,
+.v-select .v-field,
+.v-textarea .v-field {
+    border-radius: 12px !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Estilo para tabelas */
+.v-data-table {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-radius: 16px !important;
+    overflow: hidden;
+}
+
+/* Estilo para navigation drawer */
+.v-navigation-drawer {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border-right: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Estilo para app bar */
+.v-app-bar {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Estilo para dialogs */
+.v-dialog .v-card {
+    border-radius: 20px !important;
+    background: rgba(255, 255, 255, 0.98) !important;
+}
+
+/* Estilo para list items */
+.v-list-item {
+    border-radius: 12px !important;
+    margin: 4px 8px !important;
+    transition: all 0.3s ease !important;
+}
+
+.v-list-item:hover {
+    background: rgba(107, 70, 193, 0.1) !important;
+    transform: translateX(4px) !important;
+}
+
+/* Estilo para chips */
+.v-chip {
+    border-radius: 20px !important;
+    font-weight: 600 !important;
+}
+
+/* Estilo para progress circular */
+.v-progress-circular {
+    color: #6B46C1 !important;
+}

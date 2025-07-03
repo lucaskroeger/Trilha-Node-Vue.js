@@ -1,0 +1,42 @@
+volumes:
+  mysql-volume-node-final:
+    driver: local
+
+services:
+  frontend-vue:
+    build:
+      context: ./frontend-vue
+      dockerfile: Dockerfile
+    container_name: frontend-vue
+    volumes:
+      - ./frontend-vue:/app
+    ports:
+      - "3001:3001"
+    networks:
+      - node-app
+  backend-node:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: backend-node
+    volumes:
+      - ./backend:/app
+    ports:
+      - "5000:3000"
+    networks:
+      - node-app
+  db-mysql-node:
+    image: mysql:8.3.0
+    container_name: db-mysql-node
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-mysql}
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql-volume-node-final:/var/lib/mysql
+      - ./docker/mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - node-app
+networks:
+  node-app:
+    driver: bridge
